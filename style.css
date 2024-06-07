@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+
+:root {
+  --Green-lighter: hsl(148, 38%, 91%);
+  --Green-medium: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+  --White: hwb(0 100% 0%);
+  --Grey: hsl(186, 15%, 59%);
+  --Grey: hsl(187, 24%, 22%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  background: var(--Green-lighter);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+}
+
+form {
+  padding: 30px;
+  background: var(--White);
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-radius: 10px;
+}
+
+form h1 {
+  margin-bottom: 6px;
+}
+
+form .line1 {
+  width: 100%;
+  display: flex;
+  gap: 6px;
+}
+
+form .line1 div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  color: var(--Grey);
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+input {
+  padding: 11px;
+  width: 100%;
+  border: 1px solid var(--Grey);
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+}
+
+input:hover {
+  border-color: var(--Green-medium);
+}
+
+form .email-bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+form .line2 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+form .line2 div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: 8px;
+}
+
+.check {
+  padding: 8px 20px;
+  border: 1px solid var(--Grey);
+  display: flex;
+  align-items: center;
+}
+
+.check:hover {
+  border-color: var(--Green-medium);
+}
+
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 1px;
+  width: 1px;
+  background-color: var(--White);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid var(--Grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+}
+
+.checkbox::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f111";
+  font-weight: 900;
+  font-size: 1rem;
+  color: var(--Green-medium);
+  display: none;
+}
+
+.checkbox:checked {
+  background-color: var(--White);
+  border: 1px solid var(--Green-medium);
+}
+
+.checkbox:checked::after {
+  display: block;
+}
+
+.messageBloc {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.messageBloc .message {
+  width: 100%;
+  height: 16vh;
+}
+
+.consentBloc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.consentBloc div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.consentBox {
+  height: 14px;
+  width: 14px;
+}
+
+.submitBtn {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid var(--Green-lighter);
+  color: white;
+  background-color: var(--Green-medium);
+}
+
+.error {
+  background-color: var(--Red);
+}
+
+.errorMessage {
+  color: var(--Red);
+  font-size: 0.8rem;
+  max-height: 0;
+  visibility: hidden;
+}
+
+input:invalid {
+  border-color: var(--Red);
+}
+
+.validMessage {
+  width: 60%;
+  height: 12vh;
+  background: var(--Green-medium);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.validMessage div {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.validMessage i {
+  font-size: 0.8rem;
+}
+
+.validMessage div h4 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.validMessage p {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.attribution {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--Green-medium);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 800px) {
+  form {
+    width: 100%;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  form .line1 {
+    flex-direction: column;
+  }
+
+  form .line2 div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .check {
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+}

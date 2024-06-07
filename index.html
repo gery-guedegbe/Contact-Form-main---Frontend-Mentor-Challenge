@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <title>Frontend Mentor | Contact form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="validMessage" id="validMessage">
+        <div>
+          <i class="fa-solid fa-circle-check"></i>
+          <h4>Message Sent!</h4>
+        </div>
+        <p>Thanks for completing the form. We'll be in touch soon!</p>
+      </div>
+      <form name="myName" action="" onsubmit="" method="post">
+        <h1>Contact Us</h1>
+        <div class="line1">
+          <div>
+            <label for="firstName">First Name *</label>
+            <input type="text" name="firstName" id="firstName" />
+            <div class="errorMessage">This field is required</div>
+          </div>
+          <div>
+            <label for="lastName">Last Name *</label>
+            <input type="text" name="lastName" id="lastName" />
+            <div class="errorMessage">This field is required</div>
+          </div>
+        </div>
+        <div class="email-bloc">
+          <label for="email">Email Address *</label>
+          <input type="email" name="email" id="email" />
+          <div class="errorMessage">Please enter a valid email</div>
+        </div>
+        <div class="line2">
+          <label for="checkbox"> Query Type *</label>
+          <div>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="checkbox2"
+                class="checkbox"
+                id="checkbox1"
+              />
+              <label for="checkbox1">General Enquiry *</label>
+            </div>
+            <div class="check">
+              <input
+                type="checkbox"
+                name="checkbox2"
+                class="checkbox"
+                id="checkbox2"
+              />
+              <label for="checkbox2">Support Request *</label>
+            </div>
+          </div>
+          <div class="errorMessage">Please select a query type</div>
+        </div>
+        <div class="messageBloc">
+          <label for="message">Message *</label>
+          <input type="text" name="message" id="message" class="message" />
+          <div class="errorMessage">This field is required</div>
+        </div>
+        <div class="consentBloc">
+          <div>
+            <input
+              type="checkbox"
+              name="consetement"
+              id="consetement"
+              class="consentBox"
+            />
+            <label for="consetement"
+              >I consent to being contacted by the team *</label
+            >
+          </div>
+          <div class="errorMessage">
+            To submit this form, please consent to being contacted
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="submitBtn"
+          id="submitBtn"
+          onclick="validateForm()"
+        >
+          Submit
+        </button>
+      </form>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a
+        >. Coded by <a href="#">Gery GUEDEGBE</a>.
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
